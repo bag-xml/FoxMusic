@@ -307,15 +307,15 @@
 - (NSData *)downloadTrack:(FMSpotifyTrack *)track
 {
     
-//    NSString *url = @"https://api.spotifydown.com/metadata/track/";
-    NSString *url = @"https://api.spotifydown.com/download/";
+//    NSString *url = @"https://api.spotifydownloader.com/metadata/track/";
+    NSString *url = @"https://api.spotidownloader.com/download/";
     NSString *fullUrl = [url stringByAppendingString:track.identifier];
     NSURL *urlurl = [NSURL URLWithString:fullUrl];
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:urlurl];
     
-    [request addValue:@"https://spotifydown.com" forHTTPHeaderField:@"Origin"];
-    [request addValue:@"https://spotifydown.com" forHTTPHeaderField:@"Referer"];
+    [request addValue:@"https://spotidownloader.com" forHTTPHeaderField:@"Origin"];
+    [request addValue:@"https://spotidownloader.com" forHTTPHeaderField:@"Referer"];
     
     NSError *error;
     NSURLResponse *response;
