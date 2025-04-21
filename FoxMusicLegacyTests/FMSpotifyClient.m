@@ -307,7 +307,6 @@
 - (NSData *)downloadTrack:(FMSpotifyTrack *)track
 {
     
-//    NSString *url = @"https://api.spotifydownloader.com/metadata/track/";
     NSString *url = @"https://api.spotidownloader.com/download/";
     NSString *fullUrl = [url stringByAppendingString:track.identifier];
     NSURL *urlurl = [NSURL URLWithString:fullUrl];

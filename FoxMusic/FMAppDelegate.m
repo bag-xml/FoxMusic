@@ -21,18 +21,6 @@
     // Override point for customization after application launch.
     [NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:@"*.spotify.com"];
     [NSURLRequest setAllowsAnyHTTPSCertificate:YES forHost:@"accounts.spotify.com"];
-    
-//    [self lucidaClient];
-    FMBase62Decoder *decoder = [FMBase62Decoder decoderWithString:@"GitHub"];
-//    NSString *hex = [decoder toHex];
-    NSString *shouldbeHex = [[FMBase62Decoder decoderWithString:@"0nMn7LRJk9nYT0rNb5ZwAD"] toHex];
-    
-    NSLog(@"%@", shouldbeHex);
-    
-    NSDictionary *response = [[self youtubeClient] getBrowseEndpoint];
-    
-    NSArray *musicVideos = [[[self youtubeClient] parser] parseBrowseEndpoint:response];
-    
     return YES;
 }
 							
@@ -65,7 +53,6 @@
 
 - (void)remoteControlReceivedWithEvent:(UIEvent *)event
 {
-//    NSLog(@"Dinges: %@", UIEventSubtypeRemoteControlPause);
     switch (event.subtype) {
         case UIEventSubtypeRemoteControlPlay:
             [[self audioPlayer] play];
